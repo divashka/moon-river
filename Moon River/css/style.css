@@ -1,16 +1,23 @@
-@import url("font.css");
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap");
 
 :root {
   --dark-bg: #272727;
   --light-dark-bg: #2f2f2f;
-  --light-text-color: #ffffff;
-  --text-color-second: #757575;
-  --text-color-second-light: #b8b8b8;
+  --white: #ffffff;
+  --text-grey: #757575;
+  --light-grey: #c2c2c2;
   --accent: #e2b67a;
   --font-size-text: 18px;
-  --font-family-main: "Mulish", "Verdana", sans-serif;
-  --font-family-second: "Forum", "Times New Roman", serif;
 }
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Forum", serif;
+} */
 
 .html,
 .body {
@@ -20,7 +27,7 @@
 .body {
   margin: 0;
   font-size: var(--font-size-text);
-  font-family: var(--font-family-main);
+  font-family: "Mulish", "Roboto", sans-serif;
   font-weight: 300;
   line-height: 24px;
   color: var(--dark-bg);
@@ -44,7 +51,7 @@
 }
 
 .body_active .header__logo svg {
-  fill: var(--light-text-color);
+  fill: var(--white);
 }
 
 .wrapper {
@@ -82,7 +89,7 @@
   display: flex;
   align-items: center;
   column-gap: 40px;
-  color: var(--light-text-color);
+  color: var(--white);
 }
 
 .offer {
@@ -110,7 +117,7 @@
 }
 
 .offer__title {
-  font-family: var(--font-family-second);
+  font-family: "Forum", serif;
   font-weight: 400;
   font-size: 64px;
   line-height: 71px;
@@ -119,7 +126,7 @@
 }
 
 .offer__button {
-  display: flex;
+  display: block;
   position: relative;
   margin-top: 50px;
   margin-left: 128px;
@@ -161,7 +168,7 @@
 
 .offer__img-wrap {
   position: absolute;
-  left: 59%;
+  left: 53%;
 }
 
 .basket-icon {
@@ -176,7 +183,7 @@
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke: var(--light-text-color);
+  stroke: var(--white);
 }
 
 .basket__count {
@@ -189,7 +196,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--light-text-color);
+  color: var(--white);
   text-decoration: none;
   transition: color 200ms ease;
 }
@@ -221,7 +228,7 @@
   width: 100%;
   border-radius: 2px;
   transition: all 0.2s ease;
-  background-color: var(--light-text-color);
+  background-color: var(--white);
 }
 
 .menu::before,
@@ -232,7 +239,7 @@
   width: 100%;
   border-radius: 2px;
   transition: all 0.2s ease;
-  background-color: var(--light-text-color);
+  background-color: var(--white);
 }
 
 .menu::before {
@@ -269,7 +276,7 @@
   justify-content: flex-end;
   row-gap: 10px;
   text-align: right;
-  color: var(--light-text-color);
+  color: var(--white);
 }
 
 .ring-info__name {
@@ -305,7 +312,7 @@
   height: 100vh;
   opacity: 0;
   visibility: hidden;
-  color: var(--light-text-color);
+  color: var(--white);
   background-color: var(--dark-bg);
 }
 
@@ -331,7 +338,7 @@
 
 .nav-item_transformation .nav__link {
   opacity: 1;
-  border-color: var(--light-text-color);
+  border-color: var(--white);
 }
 
 .nav-item_transformation .nav__link_drop:after {
@@ -353,7 +360,7 @@
   opacity: 0.5;
   font-size: 15px;
   line-height: 75px;
-  color: var(--light-text-color);
+  color: var(--white);
   text-decoration: none;
   text-transform: uppercase;
   border-bottom: 1px solid transparent;
@@ -365,12 +372,12 @@
 }
 
 .nav__link:active {
-  border-color: var(--light-text-color);
+  border-color: var(--white);
 }
 
 .nav__link:focus {
   outline: 0 none;
-  border-color: var(--light-text-color);
+  border-color: var(--white);
 }
 
 .nav__link_drop {
@@ -442,7 +449,7 @@
 }
 
 .submenu__button:hover {
-  color: var(--text-color-second);
+  color: var(--text-grey);
 }
 
 .submenu__button:active {
@@ -455,35 +462,36 @@
 }
 
 .submenu__link {
-  color: var(--light-text-color);
+  color: var(--white);
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: color 300ms ease, border 300ms ease;
+  transition: color, border 0.3s ease;
 }
 
 .submenu__link:active {
-  border-color: var(--light-text-color);
+  border-color: var(--white);
 }
 
 .submenu__link:hover {
-  color: var(--text-color-second);
+  color: var(--text-grey);
 }
 
 .submenu__link:focus {
   outline: none;
-  border-color: var(--light-text-color);
+  border-color: var(--white);
 }
 
 .header__info {
   display: flex;
+  flex-wrap: wrap;
   row-gap: 20px;
   column-gap: 85px;
 }
 
 .info__new-collection {
-  position: relative;
+  flex-basis: 750px;
   padding-bottom: 24%;
-  flex: 0 0 67.26%;
+  width: 100%;
   border-radius: 2px;
 }
 
@@ -495,73 +503,6 @@
   width: 100%;
   height: 100%;
   background-color: rgba(39, 39, 39, 0.5);
-}
-
-.info__play {
-  display: flex;
-  align-items: center;
-  column-gap: 15px;
-  margin-top: 15px;
-}
-
-.new-collection__item {
-  position: absolute;
-  z-index: 2;
-}
-
-.new-collection__text {
-  font-style: italic;
-  font-weight: 200;
-}
-
-.new-collection__text-position {
-  top: 30px;
-  left: 30px;
-}
-
-.new-collection__title {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  font-weight: 400;
-  font-family: var(--font-family-second);
-  font-size: 48px;
-  line-height: 53px;
-}
-
-.new-collection__title-position {
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.new-collection__button-position {
-  bottom: 30px;
-  right: 30px;
-}
-
-.new-collection__button {
-  display: flex;
-  align-items: center;
-  column-gap: 8px;
-  font-style: italic;
-  font-weight: 200;
-  color: var(--light-text-color);
-  text-decoration: none;
-  transition: color 300ms ease;
-}
-
-.new-collection__button:hover {
-  color: var(--text-color-second-light);
-}
-
-.new-collection__button:active {
-  color: var(--accent);
-}
-
-.info__contact {
-  flex: 1 1 auto;
 }
 
 .info-contact__title {
@@ -590,11 +531,11 @@
 .feedback__phone {
   transition: color 300ms ease;
   text-decoration: none;
-  color: var(--text-color-second-light);
+  color: var(--light-grey);
 }
 
 .feedback__phone:hover {
-  color: var(--text-color-second);
+  color: var(--text-grey);
 }
 
 .feedback__phone:active {
@@ -614,7 +555,7 @@
 }
 
 .feedback__link:hover {
-  color: var(--text-color-second-light);
+  color: var(--light-grey);
 }
 
 .feedback__link:active {
@@ -644,14 +585,14 @@
   height: inherit;
   padding-right: 40px;
   border: 1px solid transparent;
-  border-bottom: 1px solid var(--light-text-color);
+  border-bottom: 1px solid var(--white);
   background: none;
-  color: var(--text-color-second-light);
+  color: var(--light-grey);
 }
 
 .email__input:focus {
   outline: 0 none;
-  border-color: var(--light-text-color);
+  border-color: var(--white);
 }
 
 .email__button {
@@ -661,21 +602,21 @@
   padding: 0 10px;
   height: inherit;
   border: 1px solid transparent;
-  color: var(--light-text-color);
+  color: var(--white);
   transition: background-color 300ms ease;
   background: none;
 }
 
 .email__button:hover {
   color: var(--dark-bg);
-  background-color: var(--light-text-color);
+  background-color: var(--white);
 }
 
 .email__button:active {
   background-color: var(--accent);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 993px) {
   :root {
     --font-size-text: 16px;
   }
@@ -758,11 +699,6 @@
     position: static;
     transform: translate(0);
   }
-
-  .header__info {
-    margin-top: 70px;
-    column-gap: 50px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -818,24 +754,6 @@
   .offer__button {
     margin-top: 10px;
   }
-
-  .header__info {
-    flex-direction: column;
-  }
-
-  .info__new-collection {
-    padding-bottom: 35%;
-  }
-
-  .new-collection__title {
-    font-size: 30px;
-  }
-
-  .new-collection__button,
-  .new-collection__text {
-    font-size: 15px;
-  }
-
 }
 
 @media (max-width: 600px) {
@@ -882,17 +800,6 @@
   .ring-info__price {
     font-size: 12px;
   }
-
-  .new-collection__text-position {
-    top: 15px;
-    left: 15px;
-  }
-
-  .new-collection__button-position {
-    bottom: 15px;
-    right: 15px;
-  }
-
 }
 
 @media (max-width: 480px) {
@@ -901,7 +808,7 @@
   }
 
   .logo svg {
-    fill: var(--light-text-color);
+    fill: var(--white);
   }
 
   .offer__text {
@@ -917,11 +824,11 @@
     row-gap: 40px;
     flex-direction: column-reverse;
     justify-content: center;
-    color: var(--light-text-color);
+    color: var(--white);
   }
 
   .offer__button::before {
-    background-color: var(--light-text-color);
+    background-color: var(--white);
   }
 
   .offer::after {
@@ -929,11 +836,8 @@
   }
 
   .offer__button {
-    margin: 0 auto;
-    width: fit-content;
-    text-align: center;
     margin-top: 10px;
-    color: var(--light-text-color);
+    color: var(--white);
   }
 
   .logo svg {
@@ -943,9 +847,5 @@
 
   .basket-icon {
     margin-right: 0;
-  }
-
-  .info__new-collection {
-    padding-bottom: 60%;
   }
 }
