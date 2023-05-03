@@ -1,4 +1,6 @@
 {
+    "name": "Moon River",
+    "short_name": "Moon",
     "icons": [
         {
             "src": "images/favicons/192.png",
@@ -10,5 +12,9 @@
             "type": "image/png",
             "sizes": "512x512"
         }
-    ]
+    ],
+    "start_url": "/index.html?homescreen=1",
+    "display": "browser",
+    "background_color": "#272727",
+    "theme_color": "#e2b67a"
 }
