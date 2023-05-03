@@ -2,6 +2,7 @@
 
 :root {
   --dark-bg: #272727;
+  --light-bg: #EDEDED;
   --light-dark-bg: #2f2f2f;
   --light-text-color: #ffffff;
   --text-color-second: #757575;
@@ -284,25 +285,17 @@
   flex-direction: column;
   justify-content: flex-end;
   row-gap: 10px;
-  text-align: right;
-  color: var(--light-text-color);
 }
 
 .ring-info__name {
   font-style: italic;
   font-weight: 200;
   letter-spacing: 0.05em;
-  font-size: 16px;
   text-transform: uppercase;
-}
-
-.ring-info__composition {
-  font-size: 14px;
 }
 
 .ring-info__price {
   font-style: italic;
-  font-size: 14px;
   color: var(--accent);
 }
 
@@ -311,6 +304,8 @@
   right: 0;
   bottom: 0;
   padding-bottom: 60px;
+  text-align: right;
+  color: var(--light-text-color);
 }
 
 .header__bottom {
@@ -805,6 +800,43 @@
 
 .page__map {
   margin-bottom: 20px;
+}
+
+.catalog__container {
+  display: grid;
+  grid-template-columns: minmax(400px, 27%) minmax(600px, 1fr) minmax(400px, 27%);
+  gap: 20px;
+}
+
+.catalog__column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.catalog__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  height: 50%;
+}
+
+.catalog__item {
+  background-color: var(--light-bg);
+}
+
+.catalog-thumb__img-wrap {
+  padding-bottom: 136%;
+}
+
+.catalog__info {
+  margin-top: 60px;
+}
+
+.page__catalog {
+  margin-bottom: 100px;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
